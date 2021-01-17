@@ -1,8 +1,8 @@
 import React from "react";
 import { Canvas } from "react-three-fiber";
-import { Ball } from "./components/Ball";
-import { GeometryField } from "./components/Geometry";
-import { Robot } from "./components/Robot";
+import { Ball } from "./Ball";
+import { GeometryField } from "./Geometry";
+import { Robot } from "./Robot";
 
 export interface Robots {
   id: number;
@@ -55,7 +55,7 @@ export interface FieldViewState {
   width: number;
 }
 
-export class FieldView extends React.Component<FieldViewProps, FieldViewState> {
+export default class FieldView extends React.Component<FieldViewProps, FieldViewState> {
   render() {
     const height = this.props.container.height - 10;
     const width = this.props.container.width;
