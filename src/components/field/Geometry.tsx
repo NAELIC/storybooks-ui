@@ -1,20 +1,24 @@
 import React from "react";
 import { BufferGeometry, Shape, Vector3 } from "three";
 
-export interface GeometryProps {
-  field: {
-    width: number;
-    length: number;
-    center_radius: number; // X et Y necessaire ?
-    goal: {
-      width: number;
-      depth: number;
-    };
-    penalty: {
-      width: number;
-      depth: number;
-    };
+export interface Field {
+  width: number;
+  length: number;
+  centerMark: {
+    radius: number;
   };
+  goal: {
+    width: number;
+    depth: number;
+  };
+  penalty: {
+    width: number;
+    depth: number;
+  };
+}
+
+export interface GeometryProps {
+  field: Field;
   color: string;
 }
 
@@ -39,7 +43,7 @@ export const GeometryField: React.FC<GeometryProps> = (
 
   const centerCircle = new Shape();
   centerCircle.moveTo(0, 0);
-  centerCircle.arc(0, 0, props.field.center_radius, 0, 2 * Math.PI, false);
+  centerCircle.arc(0, 0, props.field.centerMark.radius, 0, 2 * Math.PI, false);
 
   const points = centerCircle.getPoints();
   const geometryPoints = new BufferGeometry().setFromPoints(points);

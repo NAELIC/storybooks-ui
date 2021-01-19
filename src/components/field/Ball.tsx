@@ -1,13 +1,15 @@
 import React from "react";
 
-export interface BallProps {
-  ball: {
+export interface BallType{
     position: {
       x: number;
       y: number;
     };
     radius: number;
-  };
+}
+
+export interface BallProps {
+  ball: BallType;
 }
 
 export const Ball: React.FC<BallProps> = (props: BallProps) => {

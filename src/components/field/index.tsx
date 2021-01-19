@@ -1,17 +1,9 @@
 import React from "react";
 import { Canvas } from "react-three-fiber";
-import { Ball } from "./Ball";
-import { GeometryField } from "./Geometry";
-import { Robot } from "./Robot";
+import { Ball, BallType } from "./Ball";
+import { GeometryField, Field } from "./Geometry";
+import { Robot, RobotType } from "./Robot";
 
-export interface Robots {
-  id: number;
-  position: {
-    x: number;
-    y: number;
-    theta: number;
-  };
-}
 
 export enum Color {
   YELLOW = 0,
@@ -19,30 +11,12 @@ export enum Color {
 }
 
 export interface FieldViewProps {
-  field: {
-    width: number;
-    length: number;
-    center_radius: number; // X et Y necessaire ?
-    goal: {
-      width: number;
-      depth: number;
-    };
-    penalty: {
-      width: number;
-      depth: number;
-    };
-  };
+  field: Field,
   robots: {
-    blue: Array<Robots>;
-    yellow: Array<Robots>;
+    blue: Array<RobotType>;
+    yellow: Array<RobotType>;
   };
-  ball: {
-    position: {
-      x: number;
-      y: number;
-    };
-    radius: number;
-  };
+  ball: BallType,
   container: {
     width: number;
     height: number;
