@@ -34,7 +34,7 @@ export const Robot: React.FC<RobotProps> = (props: RobotProps) => {
   return (
     <group>
       <mesh
-        name="ball"
+        name="robot"
         position={[props.robot.position.x, props.robot.position.y, 0]}
       >
         <shapeGeometry attach="geometry" args={[shape]}></shapeGeometry>

@@ -21,7 +21,13 @@ export const FieldWithoutRobot = Template.bind({});
 const field = {
   width: 6,
   length: 9,
-  center_radius: 0.5,
+  centerMark: {
+    position: {
+      x: 0,
+      y: 0,
+    },
+    radius: 0.25,
+  },
   goal: {
     width: 1.0,
     depth: 0.2,
