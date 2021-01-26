@@ -56,40 +56,45 @@ const yellow = [
     position: {
       x: 1.5,
       y: 1.12,
-      theta: 3.14,
     },
+    orientation: 3.14,
+    radius: 0.025
   },
   {
     id: 1,
     position: {
       x: 1.5,
       y: 0,
-      theta: 3.14,
     },
+    orientation: 3.14,
+    radius: 0.025
   },
   {
     id: 2,
     position: {
       x: 1.5,
       y: -1.12,
-      theta: 3.14,
     },
+    orientation: 3.14,
+    radius: 0.025
   },
   {
     id: 3,
     position: {
       x: 0.55,
       y: 0,
-      theta: 3.14,
     },
+    orientation: 3.14,
+    radius: 0.025,
   },
   {
     id: 4,
     position: {
       x: 2.5,
       y: 0,
-      theta: 3.14,
     },
+    orientation: 3.14,
+    radius: 0.025,
   },
   {
     id: 5,
@@ -98,6 +103,8 @@ const yellow = [
       y: 0,
       theta: 3.14,
     },
+    orientation: 3.14,
+    radius: 0.025,
   },
 ];
 const blue = [
@@ -106,48 +113,54 @@ const blue = [
     position: {
       x: -1.5,
       y: 1.12,
-      theta: 0,
     },
+    orientation: 0,
+    radius: 0.025,
   },
   {
     id: 1,
     position: {
       x: -1.5,
       y: 0,
-      theta: 0,
     },
+    orientation: 0,
+    radius: 0.025,
   },
   {
     id: 2,
     position: {
       x: -1.5,
       y: -1.12,
-      theta: 0,
     },
+    orientation: 0,
+    radius: 0.025,
   },
   {
     id: 3,
     position: {
       x: -0.55,
       y: 0,
-      theta: 0,
     },
+    orientation: 0,
+    radius: 0.025,
   },
   {
     id: 4,
     position: {
       x: -2.5,
       y: 0,
-      theta: 0,
     },
+    orientation: 0,
+    radius: 0.025,
   },
   {
     id: 5,
     position: {
       x: -3.6,
       y: 0,
-      theta: 0,
     },
+    orientation: 0,
+    radius: 0.025,
   },
 ];
 
